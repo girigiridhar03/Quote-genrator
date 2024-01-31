@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Playfair Display', serif;
+}
+
+body{
+    height: 100vh;
+    background: rgb(226, 242, 248);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-box{
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 5px 5px 12px;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    position: relative;
+    text-align: center;
+}
+
+.quote-box h1{
+    text-align: center;
+    position: relative;
+}
+.quote-box h1::after{
+     content: '';
+     width: 4.5rem;
+     height: 3px;
+     background-color: rgb(32, 175, 231);
+     border-radius: 20px;
+     position: absolute;
+     bottom: -5px;
+     left: 50%;
+     transform: translateX(-50%);
+     
+}
+blockquote {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    min-height: 110px;
+
+}
+blockquote::after, blockquote::before{
+    content: '"';
+}
+span{
+   margin-top: 1rem;
+   font-weight: 600;
+   display: block;
+   float: right;
+   font-size: 1.1rem;
+   position: relative;
+}
+
+span::before{
+    content: '';
+    width: 1rem;
+    height: 2px;
+    border-radius: 10px;
+    background-color: rgb(32, 175, 231);
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.quote-box div{
+    width: 100%;
+    margin-top: 5rem;
+}
+
+button{
+    width: 10rem;
+    height: 50px;
+    border-radius: 30px;
+    font-weight: 550;
+    border: none;
+    background-color: rgb(32, 175, 231);
+    color: white;
+    font-size: 1.1rem;
+    
+}
+
+@media screen and (max-width:768px) {
+    .quote-box{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .quote-box{
+        width: 85%;
+    }
+}
+@media screen and (max-width:432px) {
+    .quote-box{
+        width: 90%;
+    }
+    blockquote{
+        font-size: 1.2rem;
+    }
+    span{
+        font-size: 1.1rem;
+    }
+    button{
+        width: 8rem;
+        height: 40px;
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width:320px){
+      .quote-box{
+        width: 95%;
+      }
+      h1{
+        font-size: 1.8rem;
+      }
+      blockquote{
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      span{
+        font-size: 1rem;
+      }
+}
